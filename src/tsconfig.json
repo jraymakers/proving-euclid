@@ -4,6 +4,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "noImplicitReturns": true,
+    "resolveJsonModule": true,
     "strict": true,
     "target": "es5"
   }
