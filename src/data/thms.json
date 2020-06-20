@@ -1,0 +1,1650 @@
+[
+  {
+    "kind": "cn",
+    "name": "equalitytransitive",
+    "formula": "EQ A C & EQ B C ==> EQ A B"
+  },
+  {
+    "kind": "cn",
+    "name": "congruencetransitive",
+    "formula": "EE P Q B C & EE P Q D E ==> EE B C D E"
+  },
+  {
+    "kind": "cn",
+    "name": "equalityreflexive",
+    "formula": "EQ A A"
+  },
+  {
+    "kind": "cn",
+    "name": "congruencereflexive",
+    "formula": "EE A B A B"
+  },
+  {
+    "kind": "cn",
+    "name": "equalityreverse",
+    "formula": "EE A B B A"
+  },
+  {
+    "kind": "cn",
+    "name": "sumofparts",
+    "formula": "EE A B a b & EE B C b c & BE A B C & BE a b c ==> EE A C a c"
+  },
+  {
+    "kind": "cn",
+    "name": "stability",
+    "formula": "~(NE A B) ==> EQ A B"
+  },
+  {
+    "kind": "cn",
+    "name": "equalitysub",
+    "formula": "EQ D A & BE A B C ==> BE D B C"
+  },
+  {
+    "kind": "axiom",
+    "name": "betweennessidentity",
+    "formula": "~(BE A B A)"
+  },
+  {
+    "kind": "axiom",
+    "name": "betweennesssymmetry",
+    "formula": "BE A B C ==> BE C B A"
+  },
+  {
+    "kind": "axiom",
+    "name": "innertransitivity",
+    "formula": "BE A B D & BE B C D ==> BE A B C"
+  },
+  {
+    "kind": "axiom",
+    "name": "connectivity",
+    "formula": "BE A B D & BE A C D & ~(BE A B C) & ~(BE A C B) ==> EQ B C"
+  },
+  {
+    "kind": "axiom",
+    "name": "nocollapse",
+    "formula": "NE A B & EE A B C D ==> NE C D"
+  },
+  {
+    "kind": "axiom",
+    "name": "5-line",
+    "formula": "EE B C b c & EE A D a d & EE B D b d & BE A B C & BE a b c & EE A B a b ==> EE D C d c"
+  },
+  {
+    "kind": "postulate",
+    "name": "Pasch-inner",
+    "formula": "BE A P C & BE B Q C & NC A C B ==> ?X. BE A X Q & BE B X P"
+  },
+  {
+    "kind": "postulate",
+    "name": "Pasch-outer",
+    "formula": "BE A P C & BE B C Q & NC B Q A ==> ?X. BE A X Q & BE B P X"
+  },
+  {
+    "kind": "postulate",
+    "name": "Euclid2",
+    "formula": "NE A B ==> ?X. BE A B X"
+  },
+  {
+    "kind": "postulate",
+    "name": "Euclid3",
+    "formula": "NE A B ==> ?X. CI X A A B"
+  },
+  {
+    "kind": "postulate",
+    "name": "line-circle",
+    "formula": "CI K C P Q & IC B K & NE A B ==> ?X Y. CO A B X & BE A B Y & ON X K & ON Y K & BE X B Y"
+  },
+  {
+    "kind": "postulate",
+    "name": "circle-circle",
+    "formula": "CI J C R S & IC P J & OC Q J & CI K D F G & ON P K & ON Q K ==> ?X. ON X J & ON X K"
+  },
+  {
+    "kind": "postulate",
+    "name": "Euclid5",
+    "formula": "BE r t s & BE p t q & BE r a q & EE p t q t & EE t r t s & NC p q s ==> ?X. BE p a X & BE s q X"
+  },
+  {
+    "kind": "axiom",
+    "name": "circle-center-radius",
+    "formula": "CI J A B C & ON P J ==> EE A P B C"
+  },
+  {
+    "kind": "axiom",
+    "name": "congruentequal",
+    "formula": "TC A B C a b c ==> ET A B C a b c"
+  },
+  {
+    "kind": "axiom",
+    "name": "ETpermutation",
+    "formula": "ET A B C a b c ==> ET A B C b c a & ET A B C a c b & ET A B C b a c & ET A B C c b a & ET A B C c a b"
+  },
+  {
+    "kind": "axiom",
+    "name": "ETsymmetric",
+    "formula": "ET A B C a b c ==> ET a b c A B C"
+  },
+  {
+    "kind": "axiom",
+    "name": "EFpermutation",
+    "formula": "EF A B C D a b c d ==> EF A B C D b c d a & EF A B C D d c b a & EF A B C D c d a b & EF A B C D b a d c & EF A B C D d a b c & EF A B C D c b a d & EF A B C D a d c b"
+  },
+  {
+    "kind": "axiom",
+    "name": "halvesofequals",
+    "formula": "ET A B C B C D & OS A B C D & ET a b c b c d & OS a b c d & EF A B D C a b d c ==> ET A B C a b c"
+  },
+  {
+    "kind": "axiom",
+    "name": "EFsymmetric",
+    "formula": "EF A B C D a b c d ==> EF a b c d A B C D"
+  },
+  {
+    "kind": "axiom",
+    "name": "EFtransitive",
+    "formula": "EF A B C D a b c d & EF a b c d P Q R S ==> EF A B C D P Q R S"
+  },
+  {
+    "kind": "axiom",
+    "name": "ETtransitive",
+    "formula": "ET A B C a b c & ET a b c P Q R ==> ET A B C P Q R"
+  },
+  {
+    "kind": "axiom",
+    "name": "cutoff1",
+    "formula": "BE A B C & BE a b c & BE E D C & BE e d c & ET B C D b c d & ET A C E a c e ==> EF A B D E a b d e"
+  },
+  {
+    "kind": "axiom",
+    "name": "cutoff2",
+    "formula": "BE B C D & BE b c d & ET C D E c d e & EF A B D E a b d e ==> EF A B C E a b c e"
+  },
+  {
+    "kind": "axiom",
+    "name": "paste1",
+    "formula": "BE A B C & BE a b c & BE E D C & BE e d c & ET B C D b c d & EF A B D E a b d e ==> ET A C E a c e"
+  },
+  {
+    "kind": "axiom",
+    "name": "deZolt1",
+    "formula": "BE B E D ==> ~(ET D B C E B C)"
+  },
+  {
+    "kind": "axiom",
+    "name": "deZolt2",
+    "formula": "TR A B C & BE B E A & BE B F C ==> ~(ET A B C E B F)"
+  },
+  {
+    "kind": "axiom",
+    "name": "paste2",
+    "formula": "BE B C D & BE b c d & ET C D E c d e & EF A B C E a b c e & BE A M D & BE B M E & BE a m d & BE b m e ==> EF A B D E a b d e"
+  },
+  {
+    "kind": "axiom",
+    "name": "paste3",
+    "formula": "ET A B C a b c & ET A B D a b d & BE C M D & (BE A M B | EQ A M | EQ M B) & BE c m d & (BE a m b | EQ a m | EQ m b) ==> EF A C B D a c b d"
+  },
+  {
+    "kind": "axiom",
+    "name": "paste4",
+    "formula": "EF A B m D F K H G & EF D B e C G H M L & BE A P C & BE B P D & BE K H M & BE F G L & BE B m D & BE B e C & BE F J M & BE K J L ==> EF A B C D F K M L"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalitysymmetric",
+    "formula": "EQ B A ==> EQ A B",
+    "proofRef": "equalitysymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "inequalitysymmetric",
+    "formula": "NE A B ==> NE B A",
+    "proofRef": "inequalitysymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "congruencesymmetric",
+    "formula": "EE B C A D ==> EE A D B C",
+    "proofRef": "congruencesymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "congruencetransitive",
+    "formula": "EE A B C D & EE C D E F ==> EE A B E F",
+    "proofRef": "congruencetransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "3.6a",
+    "formula": "BE A B C & BE A C D ==> BE B C D",
+    "proofRef": "3.6a.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "betweennotequal",
+    "formula": "BE A B C ==> NE B C & NE A B & NE A C",
+    "proofRef": "betweennotequal.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "extensionunique",
+    "formula": "BE A B E & BE A B F & EE B E B F ==> EQ E F",
+    "proofRef": "extensionunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "doublereverse",
+    "formula": "EE A B C D ==> EE D C B A & EE B A D C",
+    "proofRef": "doublereverse.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "congruenceflip",
+    "formula": "EE A B C D ==> EE B A D C & EE B A C D & EE A B D C",
+    "proofRef": "congruenceflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "localextension",
+    "formula": "NE A B & NE B Q ==> ?X. BE A B X & EE B X B Q",
+    "proofRef": "localextension.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "betweennesspreserved",
+    "formula": "EE A B a b & EE A C a c & EE B C b c & BE A B C ==> BE a b c",
+    "proofRef": "betweennesspreserved.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "differenceofparts",
+    "formula": "EE A B a b & EE A C a c & BE A B C & BE a b c ==> EE B C b c",
+    "proofRef": "differenceofparts.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "3.7a",
+    "formula": "BE A B C & BE B C D ==> BE A C D",
+    "proofRef": "3.7a.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "3.5b",
+    "formula": "BE A B D & BE B C D ==> BE A C D",
+    "proofRef": "3.5b.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "3.6b",
+    "formula": "BE A B C & BE A C D ==> BE A B D",
+    "proofRef": "3.6b.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "3.7b",
+    "formula": "BE A B C & BE B C D ==> BE A B D",
+    "proofRef": "3.7b.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "partnotequalwhole",
+    "formula": "BE A B C ==> ~(EE A B A C)",
+    "proofRef": "partnotequalwhole.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "NCdistinct",
+    "formula": "NC A B C ==> NE A B & NE B C & NE A C & NE B A & NE C B & NE C A",
+    "proofRef": "NCdistinct.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "01",
+    "formula": "NE A B ==> ?X. EL A B X & TR A B X",
+    "proofRef": "Prop01.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "02",
+    "formula": "NE A B & NE B C ==> ?X. EE A X B C",
+    "proofRef": "Prop02.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "extension",
+    "formula": "NE A B & NE P Q ==> ?X. BE A B X & EE B X P Q",
+    "proofRef": "extension.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthancongruence2",
+    "formula": "LT A B C D & EE A B E F ==> LT E F C D",
+    "proofRef": "lessthancongruence2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthancongruence",
+    "formula": "LT A B C D & EE C D E F ==> LT A B E F",
+    "proofRef": "lessthancongruence.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "outerconnectivity",
+    "formula": "BE A B C & BE A B D & ~(BE B C D) & ~(BE B D C) ==> EQ C D",
+    "proofRef": "outerconnectivity.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "trichotomy1",
+    "formula": "~(LT A B C D) & ~(LT C D A B) & NE A B & NE C D ==> EE A B C D",
+    "proofRef": "trichotomy1.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "interior5",
+    "formula": "BE A B C & BE a b c & EE A B a b & EE B C b c & EE A D a d & EE C D c d ==> EE B D b d",
+    "proofRef": "interior5.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinear1",
+    "formula": "CO A B C ==> CO B A C",
+    "proofRef": "collinear1.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinear2",
+    "formula": "CO A B C ==> CO B C A",
+    "proofRef": "collinear2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearorder",
+    "formula": "CO A B C ==> CO B A C & CO B C A & CO C A B & CO A C B & CO C B A",
+    "proofRef": "collinearorder.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "NCorder",
+    "formula": "NC A B C ==> NC B A C & NC B C A & NC C A B & NC A C B & NC C B A",
+    "proofRef": "NCorder.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinear4",
+    "formula": "CO A B C & CO A B D & NE A B ==> CO B C D",
+    "proofRef": "collinear4.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinear5",
+    "formula": "NE A B & CO A B C & CO A B D & CO A B E ==> CO C D E",
+    "proofRef": "collinear5.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "NChelper",
+    "formula": "NC A B C & CO A B P & CO A B Q & NE P Q ==> NC P Q C",
+    "proofRef": "NChelper.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "fiveline",
+    "formula": "CO A B C & EE A B a b & EE B C b c & EE A D a d & EE C D c d & EE A C a c & NE A C ==> EE B D b d",
+    "proofRef": "fiveline.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "twolines",
+    "formula": "CU A B C D E & CU A B C D F & NC B C D ==> EQ E F",
+    "proofRef": "twolines.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray2",
+    "formula": "RA A B C ==> NE A B",
+    "proofRef": "ray2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray",
+    "formula": "RA A B P & NE P B & ~(BE A P B) ==> BE A B P",
+    "proofRef": "ray.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray1",
+    "formula": "RA A B P ==> (BE A P B | EQ B P | BE A B P)",
+    "proofRef": "ray1.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray3",
+    "formula": "RA B C D & RA B C V ==> RA B D V",
+    "proofRef": "ray3.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "raystrict",
+    "formula": "RA A B C ==> NE A C",
+    "proofRef": "raystrict.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray4",
+    "formula": "(BE A E B | EQ E B | BE A B E) & NE A B ==> RA A B E",
+    "proofRef": "ray4.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ray5",
+    "formula": "RA A B C ==> RA A C B",
+    "proofRef": "ray5.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rayimpliescollinear",
+    "formula": "RA A B C ==> CO A B C",
+    "proofRef": "rayimpliescollinear.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "tworays",
+    "formula": "RA A B C & RA B A C ==> BE A C B",
+    "proofRef": "tworays.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "twolines2",
+    "formula": "NE A B & NE C D & CO P A B & CO P C D & CO Q A B & CO Q C D & ~(CO A C D & CO B C D) ==> EQ P Q",
+    "proofRef": "twolines2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "supplements",
+    "formula": "EA A B C a b c & SU A B C D F & SU a b c d f ==> EA D B F d b f",
+    "proofRef": "supplements.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "supplementsymmetric",
+    "formula": "SU A B C E D ==> SU D B E C A",
+    "proofRef": "supplementsymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearitypreserved",
+    "formula": "CO A B C & EE A B a b & EE A C a c & EE B C b c ==> CO a b c",
+    "proofRef": "collinearitypreserved.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "trichotomy2",
+    "formula": "LT A B C D ==> ~(LT C D A B)",
+    "proofRef": "trichotomy2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthannotequal",
+    "formula": "LT A B C D ==> NE A B & NE C D",
+    "proofRef": "lessthannotequal.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "layoff",
+    "formula": "NE A B & NE C D ==> ?X. RA A B X & EE A X C D",
+    "proofRef": "layoff.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "layoffunique",
+    "formula": "RA A B C & RA A B D & EE A C A D ==> EQ C D",
+    "proofRef": "layoffunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthanbetween",
+    "formula": "LT A B A C & RA A B C ==> BE A B C",
+    "proofRef": "lessthanbetween.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthantransitive",
+    "formula": "LT A B C D & LT C D E F ==> LT A B E F",
+    "proofRef": "lessthantransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "lessthanadditive",
+    "formula": "LT A B C D & BE A B E & BE C D F & EE B E D F ==> LT A E C F",
+    "proofRef": "lessthanadditive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "subtractequals",
+    "formula": "BE A B C & BE A D E & EE B C D E & BE A C E ==> BE A B D",
+    "proofRef": "subtractequals.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "crossbar",
+    "formula": "TR A B C & BE A E C & RA B A U & RA B C V ==> ?X. RA B E X & BE U X V",
+    "proofRef": "crossbar.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ABCequalsCBA",
+    "formula": "NC A B C ==> EA A B C C B A",
+    "proofRef": "ABCequalsCBA.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalanglessymmetric",
+    "formula": "EA A B C a b c ==> EA a b c A B C",
+    "proofRef": "equalanglessymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angledistinct",
+    "formula": "EA A B C a b c ==> NE A B & NE B C & NE A C & NE a b & NE b c & NE a c",
+    "proofRef": "angledistinct.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "4.19",
+    "formula": "BE A D B & EE A C A D & EE B D B C ==> EQ C D",
+    "proofRef": "4.19.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearbetween",
+    "formula": "CO A E B & CO C F D & NE A B & NE C D & NE A E & NE F D & ~(ME A B C D) & BE A H D & CO E F H ==> BE E H F",
+    "proofRef": "collinearbetween.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "9.5a",
+    "formula": "OS P A B C & BE R P Q & NC R Q C & CO A B R ==> OS Q A B C",
+    "proofRef": "9.5a.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "9.5b",
+    "formula": "OS P A B C & BE R Q P & NC C P R & CO A B R ==> OS Q A B C",
+    "proofRef": "9.5b.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "9.5",
+    "formula": "OS P A B C & RA R Q P & CO A B R ==> OS Q A B C",
+    "proofRef": "9.5.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samesidereflexive",
+    "formula": "NC A B P ==> SS P P A B",
+    "proofRef": "samesidereflexive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samesidesymmetric",
+    "formula": "SS P Q A B ==> SS Q P A B & SS P Q B A & SS Q P B A",
+    "proofRef": "samesidesymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "oppositesidesymmetric",
+    "formula": "OS P A B Q ==> OS Q A B P",
+    "proofRef": "oppositesidesymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "oppositesideflip",
+    "formula": "OS P A B Q ==> OS P B A Q",
+    "proofRef": "oppositesideflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samesidecollinear",
+    "formula": "SS P Q A B & CO A B C & NE A C ==> SS P Q A C",
+    "proofRef": "samesidecollinear.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalanglesNC",
+    "formula": "EA A B C a b c ==> NC a b c",
+    "proofRef": "equalanglesNC.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ondiameter",
+    "formula": "CI K F P Q & EE F D P Q & EE F M P Q & BE D F M & BE D N M ==> IC N K",
+    "proofRef": "ondiameter.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "03",
+    "formula": "LT C D A B & EE E F A B ==> ?X. BE E X F & EE E X C D",
+    "proofRef": "Prop03.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "04",
+    "formula": "EE A B a b & EE A C a c & EA B A C b a c ==> EE B C b c & EA A B C a b c & EA A C B a c b",
+    "proofRef": "Prop04.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalangleshelper",
+    "formula": "EA A B C a b c & RA b a p & RA b c q ==> EA A B C p b q",
+    "proofRef": "equalangleshelper.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalanglestransitive",
+    "formula": "EA A B C D E F & EA D E F P Q R ==> EA A B C P Q R",
+    "proofRef": "equalanglestransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalanglesreflexive",
+    "formula": "NC A B C ==> EA A B C A B C",
+    "proofRef": "equalanglesreflexive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equalanglesflip",
+    "formula": "EA A B C D E F ==> EA C B A F E D",
+    "proofRef": "equalanglesflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "supplements2",
+    "formula": "RT A B C P Q R & EA A B C J K L & RT J K L D E F ==> EA P Q R D E F & EA D E F P Q R",
+    "proofRef": "supplements2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "RTsymmetric",
+    "formula": "RT A B C D E F ==> RT D E F A B C",
+    "proofRef": "RTsymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "RTcongruence",
+    "formula": "RT A B C D E F & EA A B C P Q R ==> RT P Q R D E F",
+    "proofRef": "RTcongruence.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "midpointunique",
+    "formula": "MI A B C & MI A D C ==> EQ B D",
+    "proofRef": "midpointunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rightangleNC",
+    "formula": "RR A B C ==> NC A B C",
+    "proofRef": "rightangleNC.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "8.2",
+    "formula": "RR A B C ==> RR C B A",
+    "proofRef": "8.2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rightreverse",
+    "formula": "RR A B C & BE A B D & EE A B B D ==> EE A C D C",
+    "proofRef": "rightreverse.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "8.3",
+    "formula": "RR A B C & RA B C D ==> RR A B D",
+    "proofRef": "8.3.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "equaltorightisright",
+    "formula": "RR A B C & EA a b c A B C ==> RR a b c",
+    "proofRef": "equaltorightisright.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "altitudebisectsbase",
+    "formula": "BE A M B & EE A P B P & RR A M P ==> MI A M B",
+    "proofRef": "altitudebisectsbase.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearright",
+    "formula": "RR A B D & CO A B C & NE C B ==> RR C B D",
+    "proofRef": "collinearright.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "droppedperpendicularunique",
+    "formula": "RR A M P & RR A J P & CO A M J ==> EQ M J",
+    "proofRef": "droppedperpendicularunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "8.7",
+    "formula": "RR C B A ==> ~(RR A C B)",
+    "proofRef": "8.7.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angleorderrespectscongruence",
+    "formula": "AO A B C D E F & EA P Q R D E F ==> AO A B C P Q R",
+    "proofRef": "angleorderrespectscongruence.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angleordertransitive",
+    "formula": "AO A B C D E F & AO D E F P Q R ==> AO A B C P Q R",
+    "proofRef": "angleordertransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angleorderrespectscongruence2",
+    "formula": "AO A B C D E F & EA a b c A B C ==> AO a b c D E F",
+    "proofRef": "angleorderrespectscongruence2.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "15",
+    "formula": "BE A E B & BE C E D & NC A E C ==> EA A E C D E B & EA C E B A E D",
+    "proofRef": "Prop15.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "supplementinequality",
+    "formula": "SU A B C D F & SU a b c d f & AO a b c A B C ==> AO D B F d b f",
+    "proofRef": "supplementinequality.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "05",
+    "formula": "IS A B C ==> EA A B C A C B",
+    "proofRef": "Prop05.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "05b",
+    "formula": "IS A B C & BE A B F & BE A C G ==> EA C B F B C G",
+    "proofRef": "Prop05b.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "10",
+    "formula": "NE A B ==> ?X. BE A X B & EE X A X B",
+    "proofRef": "Prop10.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "planeseparation",
+    "formula": "SS C D A B & OS D A B E ==> OS C A B E",
+    "proofRef": "planeseparation.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samesidetransitive",
+    "formula": "SS P Q A B & SS Q R A B ==> SS P R A B",
+    "proofRef": "samesidetransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samesideflip",
+    "formula": "SS P Q A B ==> SS P Q B A",
+    "proofRef": "samesideflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "samenotopposite",
+    "formula": "SS A B C D ==> ~(OS A C D B)",
+    "proofRef": "samenotopposite.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "sameside2",
+    "formula": "SS E F A C & CO A B C & RA B F G ==> SS E G A C",
+    "proofRef": "sameside2.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "12",
+    "formula": "NE A B & NC A B C ==> ?X. PA C X A B X",
+    "proofRef": "Prop12.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "13",
+    "formula": "BE D B C & NC A B C ==> RT C B A A B D",
+    "proofRef": "Prop13.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "07",
+    "formula": "NE A B & EE C A D A & EE C B D B & SS C D A B ==> EQ C D",
+    "proofRef": "Prop07.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "crossbar2",
+    "formula": "AO H G A H G P & SS A P G H & RA G H S & RA G P T ==> ?X. BE T X S & RA G A X",
+    "proofRef": "crossbar2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angletrichotomy",
+    "formula": "AO A B C D E F ==> ~(AO D E F A B C)",
+    "proofRef": "angletrichotomy.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "06a",
+    "formula": "TR A B C & EA A B C A C B ==> ~(LT A C A B)",
+    "proofRef": "Prop06a.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "06",
+    "formula": "TR A B C & EA A B C A C B ==> EE A B A C",
+    "proofRef": "Prop06.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "08",
+    "formula": "TR A B C & TR D E F & EE A B D E & EE A C D F & EE B C E F ==> EA B A C E D F & EA C B A F E D & EA A C B D F E",
+    "proofRef": "Prop08.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "09",
+    "formula": "NC B A C ==> ?X. EA B A X X A C & IA B A C X",
+    "proofRef": "Prop09.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "11",
+    "formula": "BE A C B ==> ?X. RR A C X",
+    "proofRef": "Prop11.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "pointreflectionisometry",
+    "formula": "MI A B C & MI P B Q & NE A P ==> EE A P C Q",
+    "proofRef": "pointreflectionisometry.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rightreflection",
+    "formula": "RR A B C & MI A E a & MI B E b & MI C E c ==> RR a b c",
+    "proofRef": "rightreflection.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "notperp",
+    "formula": "BE A C B & NC A B P ==> ?X. NC A B X & SS X P A B & ~(RR A C X)",
+    "proofRef": "notperp.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "11B",
+    "formula": "BE A C B & NC A B P ==> ?X. RR A C X & OS X A B P",
+    "proofRef": "Prop11B.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "linereflectionisometry",
+    "formula": "RR B A C & RR A B D & BE C A E & BE D B F & EE A C A E & EE B D B F ==> EE C D E F",
+    "proofRef": "linereflectionisometry.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "10.12",
+    "formula": "RR A B C & RR A B H & EE B C B H ==> EE A C A H",
+    "proofRef": "10.12.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "erectedperpendicularunique",
+    "formula": "RR A B C & RR A B E & SS C E A B ==> RA B C E",
+    "proofRef": "erectedperpendicularunique.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "14",
+    "formula": "RT A B C D B E & RA B C D & OS E D B A ==> SU A B C D E & BE A B E",
+    "proofRef": "Prop14.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "16",
+    "formula": "TR A B C & BE B C D ==> AO B A C A C D & AO C B A A C D",
+    "proofRef": "Prop16.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "17",
+    "formula": "TR A B C ==> ?X Y Z. AS A B C B C A X Y Z",
+    "proofRef": "Prop17.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "18",
+    "formula": "TR A B C & LT A B A C ==> AO B C A A B C",
+    "proofRef": "Prop18.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "19",
+    "formula": "TR A B C & AO B C A A B C ==> LT A B A C",
+    "proofRef": "Prop19.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "20",
+    "formula": "TR A B C ==> TG B A A C B C",
+    "proofRef": "Prop20.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "together",
+    "formula": "TG A a B b C c & EE D F A a & EE F G B b & BE D F G & EE P Q C c ==> LT P Q D G & NE A a & NE B b & NE C c",
+    "proofRef": "together.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "together2",
+    "formula": "TG A a C c B b & EE F G B b & RA F G M & EE F M A a & RA G F N & EE G N C c ==> RA M F N",
+    "proofRef": "together2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TGsymmetric",
+    "formula": "TG A a B b C c ==> TG B b A a C c",
+    "proofRef": "TGsymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TGflip",
+    "formula": "TG A a B b C c ==> TG a A B b C c & TG A a B b c C",
+    "proofRef": "TGflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "21helper",
+    "formula": "TG B A A E B E & BE A E C ==> TT B A A C B E E C",
+    "proofRef": "21helper.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TTorder",
+    "formula": "TT A B C D E F G H ==> TT C D A B E F G H",
+    "proofRef": "TTorder.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TTflip",
+    "formula": "TT A B C D E F G H ==> TT B A D C E F G H",
+    "proofRef": "TTflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TTtransitive",
+    "formula": "TT A B C D E F G H & TT E F G H P Q R S ==> TT A B C D P Q R S",
+    "proofRef": "TTtransitive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TTflip2",
+    "formula": "TT A B C D E F G H ==> TT A B C D H G F E",
+    "proofRef": "TTflip2.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "21",
+    "formula": "TR A B C & BE A E C & BE B D E ==> TT B A A C B D D C & AO B A C B D C",
+    "proofRef": "Prop21.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "22",
+    "formula": "TG A a B b C c & TG A a C c B b & TG B b C c A a & NE F E ==> ?X Y. EE F X B b & EE F Y A a & EE X Y C c & RA F E X & TR F X Y",
+    "proofRef": "Prop22.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "Euclid4",
+    "formula": "RR A B C & RR a b c ==> EA A B C a b c",
+    "proofRef": "Euclid4.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "legsmallerhypotenuse",
+    "formula": "RR A B C ==> LT A B A C & LT B C A C",
+    "proofRef": "legsmallerhypotenuse.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "23",
+    "formula": "NE A B & NC D C E ==> ?X Y. RA A B Y & EA X A Y D C E",
+    "proofRef": "Prop23.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "23B",
+    "formula": "NE A B & NC D C E & NC A B P ==> ?X Y. RA A B Y & EA X A Y D C E & OS X A B P",
+    "proofRef": "Prop23B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "23C",
+    "formula": "NE A B & NC D C E & NC A B P ==> ?X Y. RA A B Y & EA X A Y D C E & SS X P A B",
+    "proofRef": "Prop23C.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "24",
+    "formula": "TR A B C & TR D E F & EE A B D E & EE A C D F & AO E D F B A C ==> LT E F B C",
+    "proofRef": "Prop24.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angletrichotomy2",
+    "formula": "NC A B C & NC D E F & ~(EA A B C D E F) & ~(AO D E F A B C) ==> AO A B C D E F",
+    "proofRef": "angletrichotomy2.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "25",
+    "formula": "TR A B C & TR D E F & EE A B D E & EE A C D F & LT E F B C ==> AO E D F B A C",
+    "proofRef": "Prop25.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "26A",
+    "formula": "TR A B C & TR D E F & EA A B C D E F & EA B C A E F D & EE B C E F ==> EE A B D E & EE A C D F & EA B A C E D F",
+    "proofRef": "Prop26A.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "26helper",
+    "formula": "TR A B C & EA A B C D E F & EA B C A E F D & EE A B D E ==> ~(LT E F B C)",
+    "proofRef": "26helper.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "26B",
+    "formula": "TR A B C & TR D E F & EA A B C D E F & EA B C A E F D & EE A B D E ==> EE B C E F & EE A C D F & EA B A C E D F",
+    "proofRef": "Prop26B.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelsymmetric",
+    "formula": "PR A B C D ==> PR C D A B",
+    "proofRef": "parallelsymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "paralleldef2A",
+    "formula": "TP A B C D ==> PR A B C D",
+    "proofRef": "paralleldef2A.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelcollinear1",
+    "formula": "TP A B c d & BE C c d ==> TP A B C d",
+    "proofRef": "parallelcollinear1.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "tarskiparallelflip",
+    "formula": "TP A B C D ==> TP B A C D & TP A B D C & TP B A D C",
+    "proofRef": "tarskiparallelflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelcollinear2",
+    "formula": "TP A B c d & BE c C d ==> TP A B C d",
+    "proofRef": "parallelcollinear2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelcollinear",
+    "formula": "TP A B c d & CO c d C & NE C d ==> TP A B C d",
+    "proofRef": "parallelcollinear.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "paralleldef2B",
+    "formula": "PR A B C D ==> TP A B C D",
+    "proofRef": "paralleldef2B.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelflip",
+    "formula": "PR A B C D ==> PR B A C D & PR A B D C & PR B A D C",
+    "proofRef": "parallelflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearparallel",
+    "formula": "PR A B c d & CO c d C & NE C d ==> PR A B C d",
+    "proofRef": "collinearparallel.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelNC",
+    "formula": "PR A B C D ==> NC A B C & NC A C D & NC B C D & NC A B D",
+    "proofRef": "parallelNC.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearparallel2",
+    "formula": "PR A B C D & CO C D E & CO C D F & NE E F ==> PR A B E F",
+    "proofRef": "collinearparallel2.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "27",
+    "formula": "BE A E B & BE C F D & EA A E F E F D & OS A E F D ==> PR A B C D",
+    "proofRef": "Prop27.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "27B",
+    "formula": "EA A E F E F D & OS A E F D ==> PR A E F D",
+    "proofRef": "Prop27B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "28A",
+    "formula": "BE A G B & BE C H D & BE E G H & EA E G B G H D & SS B D G H ==> PR A B C D",
+    "proofRef": "Prop28A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "28B",
+    "formula": "BE A G B & BE C H D & RT B G H G H D & SS B D G H ==> PR A B C D",
+    "proofRef": "Prop28B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "28C",
+    "formula": "RT B G H G H D & SS B D G H ==> PR G B H D",
+    "proofRef": "Prop28C.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "28D",
+    "formula": "BE E G H & EA E G B G H D & SS B D G H ==> PR G B H D",
+    "proofRef": "Prop28D.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "31",
+    "formula": "BE B D C & NC B C A ==> ?X Y Z. BE X A Y & EA Y A D A D B & EA Y A D B D A & EA D A Y B D A & EA X A D A D C & EA X A D C D A & EA D A X C D A & PR X Y B C & EE X A D C & EE A Y B D & EE A Z Z D & EE X Z Z C & EE B Z Z Y & BE X Z C & BE B Z Y & BE A Z D",
+    "proofRef": "Prop31.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "31short",
+    "formula": "BE B D C & NC B C A ==> ?X Y Z. BE X A Y & EA X A D A D C & PR X Y B C & BE X Z C & BE A Z D",
+    "proofRef": "Prop31short.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "29",
+    "formula": "PR A B C D & BE A G B & BE C H D & BE E G H & OS A G H D ==> EA A G H G H D & EA E G B G H D & RT B G H G H D",
+    "proofRef": "Prop29.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "29B",
+    "formula": "PR A G H D & OS A G H D ==> EA A G H G H D",
+    "proofRef": "Prop29B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "29C",
+    "formula": "PR G B H D & SS B D G H & BE E G H ==> EA E G B G H D & RT B G H G H D",
+    "proofRef": "Prop29C.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "crossimpliesopposite",
+    "formula": "CR A B C D & NC A C D ==> OS A C D B & OS A D C B & OS B C D A & OS B D C A",
+    "proofRef": "crossimpliesopposite.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "crisscross",
+    "formula": "PR A C B D & ~(CR A B C D) ==> CR A D B C",
+    "proofRef": "crisscross.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "30A",
+    "formula": "PR A B E F & PR C D E F & BE G H K & BE A G B & BE E H F & BE C K D & OS A G H F & OS F H K C ==> PR A B C D",
+    "proofRef": "Prop30A.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "30helper",
+    "formula": "PR A B E F & BE A G B & BE E H F & ~(CR A F G H) ==> CR A E G H",
+    "proofRef": "30helper.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "30",
+    "formula": "PR A B E F & PR C D E F & BE G H K & CO A B G & CO E F H & CO C D K & NE A G & NE E H & NE C K ==> PR A B C D",
+    "proofRef": "Prop30.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "30B",
+    "formula": "PR A B E F & PR C D E F & BE G K H & BE A G B & BE E H F & BE C K D & OS A G H F & OS C K H F ==> PR A B C D",
+    "proofRef": "Prop30B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "32",
+    "formula": "TR A B C & BE B C D ==> AS C A B A B C A C D",
+    "proofRef": "Prop32.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "33",
+    "formula": "PR A B C D & EE A B C D & BE A M D & BE B M C ==> PR A C B D & EE A C B D",
+    "proofRef": "Prop33.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "diagonalsmeet",
+    "formula": "PG A B C D ==> ?X. BE A X C & BE B X D",
+    "proofRef": "diagonalsmeet.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "TCreflexive",
+    "formula": "TR A B C ==> TC A B C A B C",
+    "proofRef": "TCreflexive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "EFreflexive",
+    "formula": "BE a p c & BE b p d & NC a b c ==> EF a b c d a b c d",
+    "proofRef": "EFreflexive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelPasch",
+    "formula": "PG A B C D & BE A D E ==> ?X. BE B X E & BE C X D",
+    "proofRef": "parallelPasch.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "parallelbetween",
+    "formula": "BE H B K & PR M B H L & CO L M K ==> BE L M K",
+    "proofRef": "parallelbetween.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "34",
+    "formula": "PG A C D B ==> EE A B C D & EE A C B D & EA C A B B D C & EA A B D D C A & TC C A B B D C",
+    "proofRef": "Prop34.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "diagonalsbisect",
+    "formula": "PG A B C D ==> ?X. MI A X C & MI B X D",
+    "proofRef": "diagonalsbisect.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "trapezoiddiagonals",
+    "formula": "PG A B C D & BE A E D ==> ?X. BE B X D & BE C X E",
+    "proofRef": "trapezoiddiagonals.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "ETreflexive",
+    "formula": "TR A B C ==> ET A B C A B C",
+    "proofRef": "ETreflexive.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "PGflip",
+    "formula": "PG A B C D ==> PG B A D C",
+    "proofRef": "PGflip.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "PGsymmetric",
+    "formula": "PG A B C D ==> PG C D A B",
+    "proofRef": "PGsymmetric.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "PGrotate",
+    "formula": "PG A B C D ==> PG B C D A",
+    "proofRef": "PGrotate.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "33B",
+    "formula": "PR A B C D & EE A B C D & SS A C B D ==> PR A C B D & EE A C B D",
+    "proofRef": "Prop33B.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "Playfairhelper",
+    "formula": "PR A B C D & PR A B C E & CR A D B C & CR A E B C ==> CO C D E",
+    "proofRef": "Playfairhelper.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "Playfairhelper2",
+    "formula": "PR A B C D & PR A B C E & CR A D B C ==> CO C D E",
+    "proofRef": "Playfairhelper2.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "Playfair",
+    "formula": "PR A B C D & PR A B C E ==> CO C D E",
+    "proofRef": "Playfair.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "triangletoparallelogram",
+    "formula": "PR D C E F & CO E F A ==> ?X. PG A X C D & CO E F X",
+    "proofRef": "triangletoparallelogram.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "35helper",
+    "formula": "PG A B C D & PG E B C F & BE A D F & CO A E F ==> BE A E F",
+    "proofRef": "35helper.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "35A",
+    "formula": "PG A B C D & PG E B C F & BE A D F & CO A E F ==> EF A B C D E B C F",
+    "proofRef": "Prop35A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "35",
+    "formula": "PG A B C D & PG E B C F & CO A D E & CO A D F ==> EF A B C D E B C F",
+    "proofRef": "Prop35.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "36A",
+    "formula": "PG A B C D & PG E F G H & CO A D E & CO A D H & CO B C F & CO B C G & EE B C F G & BE B M H & BE C M E ==> EF A B C D E F G H",
+    "proofRef": "Prop36A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "36",
+    "formula": "PG A B C D & PG E F G H & CO A D E & CO A D H & CO B C F & CO B C G & EE B C F G ==> EF A B C D E F G H",
+    "proofRef": "Prop36.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "37",
+    "formula": "PR A D B C ==> ET A B C D B C",
+    "proofRef": "Prop37.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "38",
+    "formula": "PR P Q B C & CO P Q A & CO P Q D & EE B C E F & CO B C E & CO B C F ==> ET A B C D E F",
+    "proofRef": "Prop38.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "39A",
+    "formula": "TR A B C & ET A B C D B C & BE A M C & RA B D M ==> PR A D B C",
+    "proofRef": "Prop39A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "39",
+    "formula": "TR A B C & TR D B C & SS A D B C & ET A B C D B C & NE A D ==> PR A D B C",
+    "proofRef": "Prop39.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "40",
+    "formula": "EE B C H E & ET A B C D H E & TR A B C & TR D H E & CO B C H & CO B C E & SS A D B C & NE A D ==> PR A D B C",
+    "proofRef": "Prop40.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "41",
+    "formula": "PG A B C D & CO A D E ==> ET A B C E B C",
+    "proofRef": "Prop41.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "42",
+    "formula": "TR A B C & NC J D K & MI B E C ==> ?X Z. PG X E C Z & EF A B E C X E C Z & EA C E X J D K & CO X Z A",
+    "proofRef": "Prop42.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "42B",
+    "formula": "TR a b c & MI b e c & NC J D K & MI B E C & EE E C e c & NC R E C ==> ?X Z. PG X E C Z & EF a b e c X E C Z & EA C E X J D K & SS R X E C",
+    "proofRef": "Prop42B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "43",
+    "formula": "PG A B C D & BE A H D & BE A E B & BE D F C & BE B G C & BE A K C & PG E A H K & PG G K F C ==> EF K G B E D F K H",
+    "proofRef": "Prop43.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "43B",
+    "formula": "PG A B C D & BE A H D & BE A E B & BE D F C & BE B G C & PG E A H K & PG G K F C ==> PG E K G B",
+    "proofRef": "Prop43B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "44A",
+    "formula": "PG B E F G & EA E B G J D N & BE A B E ==> ?X Y. PG A B X Y & EA A B X J D N & EF B E F G Y X B A & BE G B X",
+    "proofRef": "Prop44A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "44",
+    "formula": "TR a b c & NC J D N & NC A B R ==> ?X Y Z. PG A B X Y & EA A B X J D N & EF a b Z c A B X Y & MI b Z c & OS X A B R",
+    "proofRef": "Prop44.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "45",
+    "formula": "NC J E N & NC A B D & NC C B D & BE A O C & BE B O D & NE R K & NC K R S ==> ?X Z U. PG X K Z U & EA X K Z J E N & EF X K Z U A B C D & RA K R Z & SS X S K Z",
+    "proofRef": "Prop45.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "46",
+    "formula": "NE A B & NC A B R ==> ?X Y. SQ A B X Y & OS Y A B R & PG A B X Y",
+    "proofRef": "Prop46.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "righttogether",
+    "formula": "RR G A B & RR B A C & OS G B A C ==> RT G A B B A C & BE G A C",
+    "proofRef": "righttogether.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "twoperpsparallel",
+    "formula": "RR A B C & RR B C D & SS A D B C ==> PR A B C D",
+    "proofRef": "twoperpsparallel.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "squareparallelogram",
+    "formula": "SQ A B C D ==> PG A B C D",
+    "proofRef": "squareparallelogram.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "squareunique",
+    "formula": "SQ A B C D & SQ A B C E ==> EQ E D",
+    "proofRef": "squareunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "altitudeofrighttriangle",
+    "formula": "RR B A C & RR A M p & CO B C p & CO B C M ==> BE B M C",
+    "proofRef": "altitudeofrighttriangle.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "squareflip",
+    "formula": "SQ A B C D ==> SQ B A D C",
+    "proofRef": "squareflip.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "47A",
+    "formula": "TR A B C & RR B A C & SQ B C E D & OS D C B A ==> ?X Y. PG B X Y D & BE B X C & PG X C E Y & BE D Y E & BE Y X A & RR D Y A",
+    "proofRef": "Prop47A.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "angleaddition",
+    "formula": "AS A B C D E F P Q R & EA A B C a b c & EA D E F d e f & AS a b c d e f p q r ==> EA P Q R p q r",
+    "proofRef": "angleaddition.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "47B",
+    "formula": "TR A B C & RR B A C & SQ A B F G & OS G B A C & SQ B C E D & OS D C B A ==> ?X Y. PG B X Y D & BE B X C & PG X C E Y & BE D Y E & BE Y X A & RR D Y A & EF A B F G B X Y D",
+    "proofRef": "Prop47B.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "47",
+    "formula": "TR A B C & RR B A C & SQ A B F G & OS G B A C & SQ A C K H & OS H C A B & SQ B C E D & OS D C B A ==> ?X Y. PG B X Y D & BE B X C & PG X C E Y & BE D Y E & EF A B F G B X Y D & EF A C K H X C E Y",
+    "proofRef": "Prop47.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rectangleparallelogram",
+    "formula": "RE A B C D ==> PG A B C D",
+    "proofRef": "rectangleparallelogram.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "supplementofright",
+    "formula": "SU A B C D F & RR A B C ==> RR F B D & RR D B F",
+    "proofRef": "supplementofright.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "PGrectangle",
+    "formula": "PG A C D B & RR B A C ==> RE A C D B",
+    "proofRef": "PGrectangle.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "squarerectangle",
+    "formula": "SQ A B C D ==> RE A B C D",
+    "proofRef": "squarerectangle.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rectanglereverse",
+    "formula": "RE A B C D ==> RE D C B A",
+    "proofRef": "rectanglereverse.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "rectanglerotate",
+    "formula": "RE A B C D ==> RE B C D A",
+    "proofRef": "rectanglerotate.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "squaresequal",
+    "formula": "EE A B a b & SQ A B C D & SQ a b c d ==> EF A B C D a b c d",
+    "proofRef": "squaresequal.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "paste5",
+    "formula": "EF B M L D b m l d & EF M C E L m c e l & BE B M C & BE b m c & BE E L D & BE e l d & RE M C E L & RE m c e l ==> EF B C E D b c e d",
+    "proofRef": "paste5.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "48A",
+    "formula": "SQ A B C D & SQ a b c d & EF A B C D a b c d ==> EE A B a b",
+    "proofRef": "Prop48A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "48",
+    "formula": "TR A B C & SQ A B F G & SQ A C K H & SQ B C E D & BE B M C & BE E L D & EF A B F G B M L D & EF A C K H M C E L & RE M C E L ==> RR B A C",
+    "proofRef": "Prop48.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "collinearmidpoint",
+    "formula": "CO A B M & NE A B & EE A M M B ==> BE A M B & MI A M B",
+    "proofRef": "collinearmidpoint.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "III.01",
+    "formula": "CI J G P Q & ON A J & ON B J & NE A B & MI A D B & ON C J & ON E J & PA C E A B D & SS C G A B & MI C F E & BE C D E ==> EQ G F",
+    "proofRef": "PropIII.01.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "centerunique",
+    "formula": "CI J F P Q & CI J G p q ==> EQ F G",
+    "proofRef": "centerunique.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "radiusdetermined",
+    "formula": "CI J F P Q & CI J G p q & NE P Q & NE p q ==> EE P Q p q",
+    "proofRef": "radiusdetermined.prf"
+  },
+  {
+    "kind": "lemma",
+    "name": "radiiequal",
+    "formula": "CI J C P Q & ON A J & ON B J ==> EE C A C B",
+    "proofRef": "radiiequal.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "III.02",
+    "formula": "CI J D P Q & ON A J & ON B J & BE A E B ==> IC E J",
+    "proofRef": "PropIII.02.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "III.03A",
+    "formula": "CI J E E A & ON C J & ON D J & ON A J & ON B J & MI A F B & NC A B E ==> RR A F E & RR B F E",
+    "proofRef": "PropIII.03A.prf"
+  },
+  {
+    "kind": "proposition",
+    "name": "III.03B",
+    "formula": "CI J E E A & ON C J & ON D J & ON A J & ON B J & RR A F E & RR B F E & BE A F B & NC A B E ==> MI A F B",
+    "proofRef": "PropIII.03B.prf"
+  }
+]

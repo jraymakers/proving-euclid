@@ -1,0 +1,227 @@
+[
+  {
+    "kind": "defn",
+    "name": "unequal",
+    "formula": "NE A B <=> ~(EQ A B)"
+  },
+  {
+    "kind": "defn",
+    "name": "collinear",
+    "formula": "CO A B C <=> (EQ A B | EQ A C | EQ B C | BE B A C | BE A B C | BE A C B)"
+  },
+  {
+    "kind": "defn",
+    "name": "noncollinear",
+    "formula": "NC A B C <=> NE A B & NE A C & NE B C & ~(BE A B C) & ~(BE A C B) & ~(BE B A C)"
+  },
+  {
+    "kind": "defn",
+    "name": "inside",
+    "formula": "IC P J <=> ?X Y U V W. CI J U V W & (EQ P U | BE U Y X & EE U X V W & EE U P U Y)"
+  },
+  {
+    "kind": "defn",
+    "name": "outside",
+    "formula": "OC P J <=> ?X U V W. CI J U V W & BE U X P & EE U X V W"
+  },
+  {
+    "kind": "defn",
+    "name": "on",
+    "formula": "ON B J <=> ?X Y U. CI J U X Y & EE U B X Y"
+  },
+  {
+    "kind": "defn",
+    "name": "equilateral",
+    "formula": "EL A B C <=> EE A B B C & EE B C C A"
+  },
+  {
+    "kind": "defn",
+    "name": "triangle",
+    "formula": "TR A B C <=> NC A B C"
+  },
+  {
+    "kind": "defn",
+    "name": "ray",
+    "formula": "RA A B C <=> ?X. BE X A C & BE X A B"
+  },
+  {
+    "kind": "defn",
+    "name": "lessthan",
+    "formula": "LT A B C D <=> ?X. BE C X D & EE C X A B"
+  },
+  {
+    "kind": "defn",
+    "name": "midpoint",
+    "formula": "MI A B C <=> BE A B C & EE A B B C"
+  },
+  {
+    "kind": "defn",
+    "name": "equalangles",
+    "formula": "EA A B C a b c <=> ?U V u v. RA B A U & RA B C V & RA b a u & RA b c v & EE B U b u & EE B V b v & EE U V u v & NC A B C"
+  },
+  {
+    "kind": "defn",
+    "name": "supplement",
+    "formula": "SU A B C D F <=> RA B C D & BE A B F"
+  },
+  {
+    "kind": "defn",
+    "name": "rightangle",
+    "formula": "RR A B C <=> ?X. BE A B X & EE A B X B & EE A C X C & NE B C"
+  },
+  {
+    "kind": "defn",
+    "name": "perpat",
+    "formula": "PA P Q A B C <=> ?X. CO P Q C & CO A B C & CO A B X & RR X C P"
+  },
+  {
+    "kind": "defn",
+    "name": "perpendicular",
+    "formula": "PE P Q A B <=> ?X. PA P Q A B X"
+  },
+  {
+    "kind": "defn",
+    "name": "interior",
+    "formula": "IA A B C P <=> ?X Y. RA B A X & RA B C Y & BE X P Y"
+  },
+  {
+    "kind": "defn",
+    "name": "oppositeside",
+    "formula": "OS P A B Q <=> ?X. BE P X Q & CO A B X & NC A B P"
+  },
+  {
+    "kind": "defn",
+    "name": "sameside",
+    "formula": "SS P Q A B <=> ?X U V. CO A B U & CO A B V & BE P U X & BE Q V X & NC A B P & NC A B Q"
+  },
+  {
+    "kind": "defn",
+    "name": "isosceles",
+    "formula": "IS A B C <=> TR A B C & EE A B A C"
+  },
+  {
+    "kind": "defn",
+    "name": "cut",
+    "formula": "CU A B C D E <=> BE A E B & BE C E D & NC A B C & NC A B D"
+  },
+  {
+    "kind": "defn",
+    "name": "trianglecongruence",
+    "formula": "TC A B C a b c <=> EE A B a b & EE B C b c & EE A C a c & TR A B C"
+  },
+  {
+    "kind": "defn",
+    "name": "anglelessthan",
+    "formula": "AO A B C D E F <=> ?U X V. BE U X V & RA E D U & RA E F V & EA A B C D E X"
+  },
+  {
+    "kind": "defn",
+    "name": "togethergreater",
+    "formula": "TG A B C D E F <=> ?X. BE A B X & EE B X C D & LT E F A X"
+  },
+  {
+    "kind": "defn",
+    "name": "togetherfour",
+    "formula": "TT A B C D E F G H <=> ?X. BE E F X & EE F X G H & TG A B C D E X"
+  },
+  {
+    "kind": "defn",
+    "name": "tworightangles",
+    "formula": "RT A B C D E F <=> ?X Y Z U V. SU X Y U V Z & EA A B C X Y U & EA D E F V Y Z"
+  },
+  {
+    "kind": "defn",
+    "name": "meet",
+    "formula": "ME A B C D <=> ?X. NE A B & NE C D & CO A B X & CO C D X"
+  },
+  {
+    "kind": "defn",
+    "name": "cross",
+    "formula": "CR A B C D <=> ?X. BE A X B & BE C X D"
+  },
+  {
+    "kind": "defn",
+    "name": "tarski_parallel",
+    "formula": "TP A B C D <=> NE A B & NE C D & ~(ME A B C D) & SS C D A B"
+  },
+  {
+    "kind": "defn",
+    "name": "parallel",
+    "formula": "PR A B C D <=> ?U V u v X. NE A B & NE C D & CO A B U & CO A B V & NE U V & CO C D u & CO C D v & NE u v & ~(ME A B C D) & BE U X v & BE u X V"
+  },
+  {
+    "kind": "defn",
+    "name": "anglesum",
+    "formula": "AS A B C D E F P Q R <=> ?X. EA A B C P Q X & EA D E F X Q R & BE P X R"
+  },
+  {
+    "kind": "defn",
+    "name": "parallelogram",
+    "formula": "PG A B C D <=> PR A B C D & PR A D B C"
+  },
+  {
+    "kind": "defn",
+    "name": "square",
+    "formula": "SQ A B C D <=> EE A B C D & EE A B B C & EE A B D A & RR D A B & RR A B C & RR B C D & RR C D A"
+  },
+  {
+    "kind": "defn",
+    "name": "rectangle",
+    "formula": "RE A B C D <=> RR D A B & RR A B C & RR B C D & RR C D A & CR A C B D"
+  },
+  {
+    "kind": "defn",
+    "name": "segmentcutscircle",
+    "formula": "CA A B J E <=> ?C P Q. CI J C P Q & ON E J & BE A E B & IC A J & OC B J"
+  },
+  {
+    "kind": "defn",
+    "name": "linecutscircle",
+    "formula": "LC A B J <=> ?C P Q X Y Z. CI J C P Q & CO A B X & CO A B Y & CO A B Z & CA X Y J Z"
+  },
+  {
+    "kind": "defn",
+    "name": "tangentline",
+    "formula": "TA A B J E <=> ?C P Q. CI J C P Q & ON E J & BE A E B & ~(LC A B J)"
+  },
+  {
+    "kind": "defn",
+    "name": "congruentrectangles",
+    "formula": "RC A B C D a b c d <=> RE A B C D & RE a b c d & EE A B a b & EE B C b c"
+  },
+  {
+    "kind": "defn",
+    "name": "equalrectangles",
+    "formula": "ER A B C D a b c d <=> ?X Y Z U x z u w W. RC A B C D X Y Z U & RC a b c d x Y z u & BE x Y Z & BE X Y z & BE W U w"
+  },
+  {
+    "kind": "defn",
+    "name": "baserectangle",
+    "formula": "BR A B C D E <=> RE B C D E & CO D E A"
+  },
+  {
+    "kind": "defn",
+    "name": "figurerectangle",
+    "formula": "FR A B C D E F G H <=> RE E F G H & BE E B F & BE H D G & BR C B D G F & BR A B D H E"
+  },
+  {
+    "kind": "defn",
+    "name": "equaltriangles",
+    "formula": "TE A B C a b c <=> ?X Y x y. RE A B X Y & RE a b x y & CO X Y C & CO x y c & ER A B X Y a b x y"
+  },
+  {
+    "kind": "defn",
+    "name": "equalfigures",
+    "formula": "FE A B C D a b c d <=> ?X Y Z U x y z u. OS A B C D & OS a b c d & FR A B C D X Y Z U & FR a b c d x y z u & ER X Y Z U x y z u"
+  },
+  {
+    "kind": "defn",
+    "name": "equaltrianglefigure",
+    "formula": "TF A B C a b c d <=> ?X Y x y z u. BR A B C X Y & FR a b c d x y z u & ER B C X Y x y z u"
+  },
+  {
+    "kind": "defn",
+    "name": "circlecut",
+    "formula": "CC J K B <=> ?X Y. ON J B & ON K B & ON K X & ON K Y & IC J X & OC J Y"
+  }
+]
