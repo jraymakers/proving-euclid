@@ -1,0 +1,10 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "noImplicitReturns": true,
+    "strict": true,
+    "target": "es5"
+  }
+}
