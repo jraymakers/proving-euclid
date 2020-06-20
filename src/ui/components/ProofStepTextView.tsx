@@ -15,7 +15,7 @@ import {
 import { cssClass } from '../../style';
 import { assertNever } from '../../typescript';
 
-const rootClass = cssClass('ProofTextView', 'root', {
+const rootClass = cssClass('ProofStepTextView', 'root', {
 });
 
 export const ProofStepTextView: React.FC<{
