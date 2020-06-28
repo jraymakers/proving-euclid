@@ -1,0 +1,2702 @@
+[
+  {
+    "prefix": "defn",
+    "name": "unequal",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "NE",
+      "terms": [
+        "A",
+        "B"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "negation",
+      "formula": {
+        "kind": "predicate",
+        "symbol": "EQ",
+        "terms": [
+          "A",
+          "B"
+        ]
+      }
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "collinear",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "CO",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "disjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "EQ",
+          "terms": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EQ",
+          "terms": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EQ",
+          "terms": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "noncollinear",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "NC",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "BE",
+            "terms": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "BE",
+            "terms": [
+              "A",
+              "C",
+              "B"
+            ]
+          }
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "BE",
+            "terms": [
+              "B",
+              "A",
+              "C"
+            ]
+          }
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "inside",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "IC",
+      "terms": [
+        "P",
+        "J"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "U",
+            "V",
+            "W"
+          ]
+        },
+        {
+          "kind": "disjunction",
+          "formulas": [
+            {
+              "kind": "predicate",
+              "symbol": "EQ",
+              "terms": [
+                "P",
+                "U"
+              ]
+            },
+            {
+              "kind": "conjunction",
+              "formulas": [
+                {
+                  "kind": "predicate",
+                  "symbol": "BE",
+                  "terms": [
+                    "U",
+                    "Y",
+                    "X"
+                  ]
+                },
+                {
+                  "kind": "predicate",
+                  "symbol": "EE",
+                  "terms": [
+                    "U",
+                    "X",
+                    "V",
+                    "W"
+                  ]
+                },
+                {
+                  "kind": "predicate",
+                  "symbol": "EE",
+                  "terms": [
+                    "U",
+                    "P",
+                    "U",
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "U",
+      "V",
+      "W"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "outside",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "OC",
+      "terms": [
+        "P",
+        "J"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "U",
+            "V",
+            "W"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "U",
+            "X",
+            "P"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "U",
+            "X",
+            "V",
+            "W"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "U",
+      "V",
+      "W"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "on",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "ON",
+      "terms": [
+        "B",
+        "J"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "U",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "U",
+            "B",
+            "X",
+            "Y"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "U"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "equilateral",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "EL",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "C",
+            "C",
+            "A"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "triangle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TR",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "predicate",
+      "symbol": "NC",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "ray",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "RA",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "X",
+            "A",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "X",
+            "A",
+            "B"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "lessthan",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "LT",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "C",
+            "X",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "C",
+            "X",
+            "A",
+            "B"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "midpoint",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "MI",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "B",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "equalangles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "EA",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "B",
+            "A",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "B",
+            "C",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "b",
+            "a",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "b",
+            "c",
+            "v"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "U",
+            "b",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "V",
+            "b",
+            "v"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "U",
+            "V",
+            "u",
+            "v"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "U",
+      "V",
+      "u",
+      "v"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "supplement",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "SU",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "B",
+            "F"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "rightangle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "RR",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "X",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "C",
+            "X",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "B",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "perpat",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "PA",
+      "terms": [
+        "P",
+        "Q",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "P",
+            "Q",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "X",
+            "C",
+            "P"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "perpendicular",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "PE",
+      "terms": [
+        "P",
+        "Q",
+        "A",
+        "B"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "predicate",
+      "symbol": "PA",
+      "terms": [
+        "P",
+        "Q",
+        "A",
+        "B",
+        "X"
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "interior",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "IA",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "P"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "B",
+            "A",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "B",
+            "C",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "X",
+            "P",
+            "Y"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "oppositeside",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "OS",
+      "terms": [
+        "P",
+        "A",
+        "B",
+        "Q"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "P",
+            "X",
+            "Q"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "P"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "sameside",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "SS",
+      "terms": [
+        "P",
+        "Q",
+        "A",
+        "B"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "P",
+            "U",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "Q",
+            "V",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "P"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "Q"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "U",
+      "V"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "isosceles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "IS",
+      "terms": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "TR",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "cut",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "CU",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "E",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "C",
+            "E",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NC",
+          "terms": [
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "trianglecongruence",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TC",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "a",
+            "b"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "C",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "C",
+            "a",
+            "c"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "TR",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "anglelessthan",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "AO",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "U",
+            "X",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "E",
+            "D",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RA",
+          "terms": [
+            "E",
+            "F",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EA",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "X"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "U",
+      "X",
+      "V"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "togethergreater",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TG",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "X",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "LT",
+          "terms": [
+            "E",
+            "F",
+            "A",
+            "X"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "togetherfour",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TT",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "E",
+            "F",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "F",
+            "X",
+            "G",
+            "H"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "TG",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "X"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "tworightangles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "RT",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "SU",
+          "terms": [
+            "X",
+            "Y",
+            "U",
+            "V",
+            "Z"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EA",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "X",
+            "Y",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EA",
+          "terms": [
+            "D",
+            "E",
+            "F",
+            "V",
+            "Y",
+            "Z"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "Z",
+      "U",
+      "V"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "meet",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "ME",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "C",
+            "D",
+            "X"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "cross",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "CR",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "X",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "C",
+            "X",
+            "D"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "tarski_parallel",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TP",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "ME",
+            "terms": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        {
+          "kind": "predicate",
+          "symbol": "SS",
+          "terms": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "parallel",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "PR",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "U",
+            "V"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "C",
+            "D",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "C",
+            "D",
+            "v"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "NE",
+          "terms": [
+            "u",
+            "v"
+          ]
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "ME",
+            "terms": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "U",
+            "X",
+            "v"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "u",
+            "X",
+            "V"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "U",
+      "V",
+      "u",
+      "v",
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "anglesum",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "AS",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "P",
+        "Q",
+        "R"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "EA",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "P",
+            "Q",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EA",
+          "terms": [
+            "D",
+            "E",
+            "F",
+            "X",
+            "Q",
+            "R"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "P",
+            "X",
+            "R"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "parallelogram",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "PG",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "PR",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "PR",
+          "terms": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "square",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "SQ",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "rectangle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "RE",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RR",
+          "terms": [
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CR",
+          "terms": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "segmentcutscircle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "CA",
+      "terms": [
+        "A",
+        "B",
+        "J",
+        "E"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "C",
+            "P",
+            "Q"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "E",
+            "J"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "E",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "IC",
+          "terms": [
+            "A",
+            "J"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "OC",
+          "terms": [
+            "B",
+            "J"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "C",
+      "P",
+      "Q"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "linecutscircle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "LC",
+      "terms": [
+        "A",
+        "B",
+        "J"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "C",
+            "P",
+            "Q"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "A",
+            "B",
+            "Z"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CA",
+          "terms": [
+            "X",
+            "Y",
+            "J",
+            "Z"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "C",
+      "P",
+      "Q",
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "tangentline",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TA",
+      "terms": [
+        "A",
+        "B",
+        "J",
+        "E"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "CI",
+          "terms": [
+            "J",
+            "C",
+            "P",
+            "Q"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "E",
+            "J"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "A",
+            "E",
+            "B"
+          ]
+        },
+        {
+          "kind": "negation",
+          "formula": {
+            "kind": "predicate",
+            "symbol": "LC",
+            "terms": [
+              "A",
+              "B",
+              "J"
+            ]
+          }
+        }
+      ]
+    },
+    "existential": [
+      "C",
+      "P",
+      "Q"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "congruentrectangles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "RC",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "A",
+            "B",
+            "a",
+            "b"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "EE",
+          "terms": [
+            "B",
+            "C",
+            "b",
+            "c"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "equalrectangles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "ER",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RC",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "X",
+            "Y",
+            "Z",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RC",
+          "terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "x",
+            "Y",
+            "z",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "x",
+            "Y",
+            "Z"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "X",
+            "Y",
+            "z"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "W",
+            "U",
+            "w"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "Z",
+      "U",
+      "x",
+      "z",
+      "u",
+      "w",
+      "W"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "baserectangle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "BR",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "D",
+            "E",
+            "A"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "figurerectangle",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "FR",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "E",
+            "F",
+            "G",
+            "H"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "E",
+            "B",
+            "F"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BE",
+          "terms": [
+            "H",
+            "D",
+            "G"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BR",
+          "terms": [
+            "C",
+            "B",
+            "D",
+            "G",
+            "F"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "BR",
+          "terms": [
+            "A",
+            "B",
+            "D",
+            "H",
+            "E"
+          ]
+        }
+      ]
+    },
+    "existential": null
+  },
+  {
+    "prefix": "defn",
+    "name": "equaltriangles",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TE",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "A",
+            "B",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "RE",
+          "terms": [
+            "a",
+            "b",
+            "x",
+            "y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "X",
+            "Y",
+            "C"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "CO",
+          "terms": [
+            "x",
+            "y",
+            "c"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ER",
+          "terms": [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "a",
+            "b",
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "x",
+      "y"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "equalfigures",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "FE",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "OS",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "OS",
+          "terms": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "FR",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "X",
+            "Y",
+            "Z",
+            "U"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "FR",
+          "terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "x",
+            "y",
+            "z",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ER",
+          "terms": [
+            "X",
+            "Y",
+            "Z",
+            "U",
+            "x",
+            "y",
+            "z",
+            "u"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "Z",
+      "U",
+      "x",
+      "y",
+      "z",
+      "u"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "equaltrianglefigure",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "TF",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "BR",
+          "terms": [
+            "A",
+            "B",
+            "C",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "FR",
+          "terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "x",
+            "y",
+            "z",
+            "u"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ER",
+          "terms": [
+            "B",
+            "C",
+            "X",
+            "Y",
+            "x",
+            "y",
+            "z",
+            "u"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y",
+      "x",
+      "y",
+      "z",
+      "u"
+    ]
+  },
+  {
+    "prefix": "defn",
+    "name": "circlecut",
+    "predicateFormula": {
+      "kind": "predicate",
+      "symbol": "CC",
+      "terms": [
+        "J",
+        "K",
+        "B"
+      ]
+    },
+    "equivalentFormula": {
+      "kind": "conjunction",
+      "formulas": [
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "J",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "K",
+            "B"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "K",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "ON",
+          "terms": [
+            "K",
+            "Y"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "IC",
+          "terms": [
+            "J",
+            "X"
+          ]
+        },
+        {
+          "kind": "predicate",
+          "symbol": "OC",
+          "terms": [
+            "J",
+            "Y"
+          ]
+        }
+      ]
+    },
+    "existential": [
+      "X",
+      "Y"
+    ]
+  }
+]
