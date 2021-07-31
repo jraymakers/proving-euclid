@@ -15,55 +15,6 @@ import {
 import { cssClass } from '../../style';
 import { assertNever } from '../../typescript';
 
-const rootClass = cssClass('ProofStepTextView', 'root', {
-});
-
-export const ProofStepTextView: React.FC<{
-  proofStep: ProofStep;
-}> = ({
-  proofStep,
-}) => {
-  return (
-    <div className={rootClass}>
-      <ProofStepTextViewContents proofStep={proofStep} />
-    </div>
-  );
-};
-ProofStepTextView.displayName = 'ProofStepTextView';
-
-const ProofStepTextViewContents: React.FC<{
-  proofStep: ProofStep;
-}> = ({
-  proofStep,
-}) => {
-  switch (proofStep.kind) {
-    case 'known':
-      return <KnownProofStepTextView proofStep={proofStep} />;
-    case 'justified':
-      return <JustifiedProofStepTextView proofStep={proofStep} />;
-    case 'unjustified':
-      return <UnjustifiedProofStepTextView proofStep={proofStep} />;
-    case 'assumption':
-      return <AssumptionProofStepTextView proofStep={proofStep} />;
-    case 'reductio':
-      return <ReductioProofStepTextView proofStep={proofStep} />;
-    case 'cases_start':
-      return <CasesStartProofStepTextView proofStep={proofStep} />;
-    case 'case':
-      return <CaseProofStepTextView proofStep={proofStep} />;
-    case 'qedcase':
-      return <QedCaseProofStepTextView />;
-    case 'cases_end':
-      return <CasesEndProofStepTextView proofStep={proofStep} />;
-    case 'comment':
-      return <CommentProofStepTextView proofStep={proofStep} />;
-    default:
-      assertNever(proofStep);
-      return null;
-  }
-};
-ProofStepTextView.displayName = 'ProofStepTextView';
-
 const KnownProofStepTextView: React.FC<{
   proofStep: KnownProofStep;
 }> = ({
@@ -169,3 +120,52 @@ const CommentProofStepTextView: React.FC<{
   );
 };
 CommentProofStepTextView.displayName = 'CommentProofStepTextView';
+
+const ProofStepTextViewContents: React.FC<{
+  proofStep: ProofStep;
+}> = ({
+  proofStep,
+}) => {
+  switch (proofStep.kind) {
+    case 'known':
+      return <KnownProofStepTextView proofStep={proofStep} />;
+    case 'justified':
+      return <JustifiedProofStepTextView proofStep={proofStep} />;
+    case 'unjustified':
+      return <UnjustifiedProofStepTextView proofStep={proofStep} />;
+    case 'assumption':
+      return <AssumptionProofStepTextView proofStep={proofStep} />;
+    case 'reductio':
+      return <ReductioProofStepTextView proofStep={proofStep} />;
+    case 'cases_start':
+      return <CasesStartProofStepTextView proofStep={proofStep} />;
+    case 'case':
+      return <CaseProofStepTextView proofStep={proofStep} />;
+    case 'qedcase':
+      return <QedCaseProofStepTextView />;
+    case 'cases_end':
+      return <CasesEndProofStepTextView proofStep={proofStep} />;
+    case 'comment':
+      return <CommentProofStepTextView proofStep={proofStep} />;
+    default:
+      assertNever(proofStep);
+      return null;
+  }
+};
+ProofStepTextViewContents.displayName = 'ProofStepTextViewContents';
+
+const rootClass = cssClass('ProofStepTextView', 'root', {
+});
+
+export const ProofStepTextView: React.FC<{
+  proofStep: ProofStep;
+}> = ({
+  proofStep,
+}) => {
+  return (
+    <div className={rootClass}>
+      <ProofStepTextViewContents proofStep={proofStep} />
+    </div>
+  );
+};
+ProofStepTextView.displayName = 'ProofStepTextView';

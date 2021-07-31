@@ -20,10 +20,10 @@ module.exports = () => ({
     needs: ['bundleProd', 'copy', 'lint']
   },
   bundleDev: {
-    action: jr.scriptAction(webpackPath, ['--hide-modules', '--mode', 'development'], { cwd: __dirname })
+    action: jr.scriptAction(webpackPath, ['--mode', 'development'], { cwd: __dirname })
   },
   bundleProd: {
-    action: jr.scriptAction(webpackPath, ['--hide-modules', '--mode', 'production'], { cwd: __dirname })
+    action: jr.scriptAction(webpackPath, ['--mode', 'production'], { cwd: __dirname })
   },
   clean: {
     action: () => fse.remove(outDir)
@@ -44,6 +44,6 @@ module.exports = () => ({
     action: jr.scriptAction(basicServePath, ['./out'], { cwd: __dirname })
   },
   watch: {
-    action: jr.scriptAction(webpackPath, ['--hide-modules', '--progress', '--watch'], { cwd: __dirname })
+    action: jr.scriptAction(webpackPath, ['--progress', '--watch'], { cwd: __dirname })
   },
 });
